@@ -64,6 +64,7 @@
 
 typedef struct				s_arg
 {
+	int						fd;
 	int						s_null;
 	int						index;
 	int						ln_max;
@@ -128,5 +129,8 @@ void						ft_unicode_1(wchar_t *c, char str[5]);
 int							ft_write_buff(char *buff, t_arg *arg);
 int							ft_write_end(char *buff, t_arg *arg, va_list ap);
 int							ft_write_wchar(char *buff, t_arg *arg);
+int							ft_init_printf(char *buff, t_arg *arg, int fd);
+int							ft_dprintf(int fd, const char *format, ...);
+int							ft_load(t_arg *arg, char *buff, va_list ap, const char *format);
 
 #endif

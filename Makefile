@@ -27,6 +27,9 @@ SRC_NAME = ft_printf.c \
 		   ft_set_arg_nb.c \
 		   ft_def_x.c \
 		   ft_write_buff.c \
+		   ft_init.c \
+		   ft_load.c \
+		   ft_dprintf.c \
 		   ft_fill_nchar.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)

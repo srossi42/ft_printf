@@ -13,13 +13,13 @@
 #include "../include/ft_printf.h"
 #include "../include/ft_tabptr.h"
 
-int			ft_printf(const char *format, ...)
+int			ft_dprintf(int fd, const char *format, ...)
 {
 	t_arg	arg;
 	char	buff[BUFF_SIZE + 1];
 	va_list ap;
 
-	ft_init_printf(buff, &arg, 1);
+	ft_init_printf(buff, &arg, fd);
 	va_start(ap, format);
 	if (!format)
 		return (-1);
