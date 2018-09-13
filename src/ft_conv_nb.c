@@ -6,11 +6,11 @@
 /*   By: srossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 17:38:08 by srossi            #+#    #+#             */
-/*   Updated: 2018/03/30 16:23:02 by srossi           ###   ########.fr       */
+/*   Updated: 2018/09/13 15:31:28 by srossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 static	void	ft_minus_on(t_arg *arg)
 {
@@ -56,7 +56,8 @@ int				ft_conv_nb(char *str, t_arg *arg, va_list ap)
 	ft_arg_clean(arg);
 	NB_LN = ft_strlen(ARG_STR);
 	ft_def_ln_max(arg);
-	ft_strdel(&STR_TMP);
+	if (STR_TMP != NULL)
+		ft_strdel(&STR_TMP);
 	if (FLAGS & F_MINUS)
 	{
 		ft_minus_on(arg);

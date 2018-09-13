@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 uintmax_t	ft_cast_us(t_arg *arg, va_list ap)
 {

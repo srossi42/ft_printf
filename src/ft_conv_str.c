@@ -6,11 +6,11 @@
 /*   By: srossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/17 19:50:44 by srossi            #+#    #+#             */
-/*   Updated: 2018/03/30 16:23:10 by srossi           ###   ########.fr       */
+/*   Updated: 2018/09/13 15:45:49 by srossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 static	void	ft_def_str_max(t_arg *arg, char *str)
 {

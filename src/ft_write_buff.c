@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int		ft_write_buff(char *str, t_arg *arg)
 {
@@ -21,17 +21,17 @@ int		ft_write_buff(char *str, t_arg *arg)
 	}
 	else
 	{
-		write(1, str, BUFF_I);
+		write(arg->fd, str, BUFF_I);
 		ft_bzero(str, BUFF_I);
 		BUFF_I = 0;
-		write(1, STR_TMP, LN_MAX);
+		write(arg->fd, STR_TMP, LN_MAX);
 	}
 	return (0);
 }
 
 int		ft_write_end(char *buff, t_arg *arg, va_list ap)
 {
-	write(1, buff, BUFF_I);
+	write(arg->fd, buff, BUFF_I);
 	ft_bzero(buff, BUFF_I);
 	va_end(ap);
 	return (INDEX);

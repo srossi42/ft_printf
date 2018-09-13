@@ -6,11 +6,11 @@
 /*   By: srossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 15:40:47 by srossi            #+#    #+#             */
-/*   Updated: 2018/03/30 16:22:49 by srossi           ###   ########.fr       */
+/*   Updated: 2018/09/13 15:43:05 by srossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_arg_reset(t_arg *arg, int n)
 {
@@ -29,10 +29,10 @@ int	ft_arg_reset(t_arg *arg, int n)
 	NB_SPACES = 0;
 	NB_ZEROS = 0;
 	SIZE = 0;
-	if ((ARG_STR) != NULL)
-		ft_strdel(&(ARG_STR));
+	if (ARG_STR != NULL)
+		ft_strdel(&ARG_STR);
 	if ((STR_TMP) != NULL)
-		ft_strdel(&(STR_TMP));
+		ft_strdel(&STR_TMP);
 	if (n == 2)
 		return (-1);
 	return (0);

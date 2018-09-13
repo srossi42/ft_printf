@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 void	ft_strlen_wchar(wchar_t *c, t_arg *arg)
 {
